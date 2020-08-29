@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+ 
+$navbar-brand-color: #565387;
+$color : #3498db;
 
 *{
   margin:0;
@@ -9,25 +12,25 @@
 
 .navbar{
   background-color:#fff !important;
-}
 
-.navbar-brand{
-  font-size: 1.9rem !important;
-  color:#565387 !important;
-}
-
-.navbar a{
-  font-size: 1.3rem;
-  text-transform: capitalize;
-}
-
-.menu_active{
-  font-weight: bold;
-  border-bottom: 1px solid #565387;
-}
-
-.navbar a:hover{
-  color:#3498db !important
+  .navbar-brand{
+    font-size: 1.9rem !important;
+    color:$navbar-brand-color !important;
+  }
+  
+  & a{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+  
+  .menu_active{
+    font-weight: bold;
+    border-bottom: 1px solid $navbar-brand-color;
+  }
+  
+  & a:hover{
+    color:$color !important
+  }
 }
 
 @media(max-width:991px){
@@ -53,46 +56,46 @@
   width:100%;
   height:80vh;
   margin-top:30px;
-}
 
-#header h1{
-  margin:0 0 10px 0;
-  font-size:40px;
-  font-weight:700px;
-  color:black;
-}
+  & h1{
+    margin:0 0 10px 0;
+    font-size:40px;
+    font-weight:700px;
+    color:black;
+  }
+  
+  & h5{
+    color: #484848;
+    font-size:20px;
+  }
 
-#header h5{
-  color: #484848;
-  font-size:20px;
+  & .brand-name{
+    color:$color;
+  }
+
+  & .animate{
+    position:absolute;
+    margin-top:-80px;
+    animation: digitalMarketing 2s ease-in-out infinite alternate-reverse both;
+  }
 }
 
 .btn-get-started{
-  border:1px solid #3498db;
+  border:1px solid $color;
   border-radius:30px;
   padding:5px 15px 5px 15px;
   text-decoration: none;
-}
 
-.btn-get-started:hover{
-  background-color: #3498db;
-  color:white;
-}
-
-#header .brand-name{
-  color:#3498db;
+  &:hover{
+    background-color: $color;
+    color:white;
+  }
 }
 
 .header-img{
   width:100%;
   height:40px;
   position:relative;
-}
-
-#header .animate{
-  position:absolute;
-  margin-top:-80px;
-  animation: digitalMarketing 2s ease-in-out infinite alternate-reverse both;
 }
 
 @-webkit-keyframes digitalMarketing{
@@ -116,8 +119,6 @@
 /* .content-homePage{
   margin-top:180px !important;
 } */
-
-
 
 .card-img-top{
   height:300px;
